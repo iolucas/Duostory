@@ -1,35 +1,30 @@
+<?php
+
+	$appId = $_GET['app'];
+
+?>
+
 <html>
-  <body>
+	<title>Duostory</title>
+	<link rel="stylesheet" href="<?php echo 'apps/' . $appId . '/style.css' ?>">
+  	<body>
+  		<div style="text-align:center">
+	    	<div id="ds-player"></div>
+	    	<?php include 'apps/' . $appId . '/view.html' ?>
+  		</div>
+  		<pre>
+  			check next steps
+			verify whether is right to change the project again
+			create modules for code classes, music teaching, language teaching
+			user google caja
+		</pre>
 
-    <div id="duostory-conteiner"></div>
-
-    <script src="eventhandler.js" charset="utf-8"></script>
-    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="duostory.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
-      duostory.player.onTime('1', function() {
-        console.log("teste1");
-
-      });
-
-            duostory.player.onTime('10', function() {
-        console.log("teste10");
-
-      });
-
-                  duostory.player.onTime('4', function() {
-        console.log("teste4");
-
-      });
-
-
-                        duostory.player.onTime('3', function() {
-        console.log("teste3");
-
-      });
-
-
-    </script>
-  </body>
+	    <script src="js/eventhandler.js" charset="utf-8"></script>
+	    <script src="js/timeEventhandler.js" charset="utf-8"></script>
+	    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	    <script src="js/duostory.js"></script>
+	    <script src="https://www.youtube.com/iframe_api"></script>
+	    
+	    <script src="<?php echo 'apps/' . $appId . '/script.js' ?>"></script>
+  	</body>
 </html>

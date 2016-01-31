@@ -1,0 +1,12 @@
+.myApp {
+	background-color: #aff;
+	width: 500px;
+	min-height: 500px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.text-light {
+	color: #fff;
+	background-color: #55f;
+}
